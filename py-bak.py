@@ -23,3 +23,4 @@ def __main__():
             welcom()
             password.mkdir_password()
             password.touch_password_file()
+            password.
