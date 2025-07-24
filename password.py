@@ -19,9 +19,8 @@ def touch_password_file():
         os.chdir("password")
         ls = os.listdir()
         if ("password.txt" not in ls) :
-            with open("password.txt", "w", encoding="utf-8") as file:
-                file.write("")
-            return True
+            os.system("touch password.txt")
+        
         else:
             print("Password file already exists.")
             return None
@@ -38,7 +37,7 @@ def password_save(password):
     
     try:
         # Change to the password directory and save the password
-        if os.path.getsize("password/password.txt") == 0:
+        if os.path.getsize("password.txt") == 0:
             with open("password.txt", "w", encoding="utf-8") as file:
                 file.write(password)
         else:
