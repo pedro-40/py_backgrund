@@ -38,9 +38,8 @@ def password_save(password):
     
     try:
         # Change to the password directory and save the password
-        os.chdir("password")
-        if os.path.getsize("password.txt") == 0:
-            with open("password.txt", "a", encoding="utf-8") as file:
+        if os.path.getsize("password/password.txt") == 0:
+            with open("password.txt", "w", encoding="utf-8") as file:
                 file.write(password)
         else:
             print("Password file is not empty.")
