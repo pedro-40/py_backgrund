@@ -1,14 +1,14 @@
 import os
 
 def mkdir_password():
-    '''Create a password file if it doesn't exist'''
+    '''Create a password dir if it doesn't exist'''
     
     try :
         # Create the password.txt file if it doesn't exist
         os.makedirs("password", exist_ok=True)
 
     except :
-        print("Error creating password file")
+        print("Error creating password dir")
 
 
 def touch_password_file():

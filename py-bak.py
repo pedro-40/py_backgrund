@@ -8,11 +8,11 @@ def __main__():
     '''Main Function to Execute the Script'''
 
     if ls := os.listdir():
-        if "password" not in ls or "back_grund" not in ls :
+        if "password" not in ls or "back_ground" not in ls :
             inputs.welcom()
             password.mkdir_password()
             password.touch_password_file()
-            pas = inputs.inputs()
+            pas = inputs.password_input()
             password.password_save(pas)
 
 
