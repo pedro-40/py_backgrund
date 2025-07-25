@@ -29,4 +29,17 @@ def find_img(img_name) :
         return None
 
 
-      
+def img_copy(img_address) :
+    '''Copy the image to the back_ground directory'''
+
+    try :
+        if img_address:
+            os.system(f"cp {img_address} back_grond/")
+            print(Fore.GREEN+"Image copied successfully."+Fore.RESET)
+            return True
+        else:
+            print(Fore.RED+"No image address provided."+Fore.RESET)
+            return False
+    except :
+        print(Fore.RED+"Error copying image."+Fore.RESET) 
+        return False
