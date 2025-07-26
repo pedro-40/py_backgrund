@@ -11,9 +11,10 @@ def password_hashing(password: str ) -> str:
     try :
         pas = password.encode() 
         pas_hash = hashlib.sha256(pas)
+        print(Fore.GREEN + "Password hashed successfully" + Fore.RESET)
+        
         return pas_hash.hexdigest()
 
     except :
         print(Fore.RED+ "Error in hashing the password"+Fore.RESET)
         return None
-print((password_hashing("sallm1234--")))
