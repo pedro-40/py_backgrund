@@ -28,7 +28,6 @@ def find_img(img_name) :
         print(Fore.RED+"Error finding image."+Fore.RESET)
         return None
 
-
 def img_copy(img_address) :
     '''Copy the image to the back_ground directory'''
 
