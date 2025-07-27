@@ -42,3 +42,11 @@ def img_copy(img_address) :
     except :
         print(Fore.RED+"Error copying image."+Fore.RESET) 
         return False
+
+
+img_mkdir()
+
+img = find_img("prof2.jpg")
+
+img_copy(img)
+
