@@ -12,9 +12,9 @@ def img_mkdir() :
         print(Fore.RED+"Error creating back_ground dir")
 
 
-def find_img(img_name) :
+def find_img() :
     '''Find the image in the back_ground directory'''
-
+    img_name = input(Fore.YELLOW+"Enter the image name: "+Fore.RESET) 
     try :
         img_address = subprocess.check_output(["find", "/home", "-name", img_name], text=True).strip()
         if img_address:
@@ -44,9 +44,5 @@ def img_copy(img_address) :
         return False
 
 
-img_mkdir()
 
-img = find_img("prof2.jpg")
-
-img_copy(img)
-
+img_copy(find_img())
